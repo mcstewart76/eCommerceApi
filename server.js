@@ -24,7 +24,9 @@ sequelize.sync({ force: true }).then(() => {
   seedProducts();
   seedProductTags();
   seedTags();
-})
+}).then(() => {
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
-});
+});  
+})
+
